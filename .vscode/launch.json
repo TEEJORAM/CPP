@@ -20,7 +20,7 @@
             "MIMode": "lldb",
             "setupCommands": [
                 {
-                    "description": "Enable pretty-printing for lldb",
+                    "description": "Set process to follow child after fork",
                     "text": "settings set target.process.follow-fork-mode child",
                     "ignoreFailures": true
                 }
