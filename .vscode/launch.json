@@ -44,23 +44,6 @@
             ]
         },
         {
-            "name": "Debug (CMake Target) - Linux",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${command:cmake.launchTargetPath}",
-            "args": [],
-            "cwd": "${workspaceFolder}",
-            "stopAtEntry": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-        {
             "name": "Release (Run Only) - Windows",
             "type": "cppvsdbg",
             "request": "launch",
