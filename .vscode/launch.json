@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug (CMake Target)",
+            "name": "Debug (CMake Target) - Windows",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
@@ -10,12 +10,39 @@
             "stopAtEntry": false
         },
         {
-            "name": "Release (Run Only)",
+            "name": "Debug (CMake Target) - macOS/Linux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "MIMode": "lldb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.process.follow-fork-mode child",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Release (Run Only) - Windows",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false
+        },
+        {
+            "name": "Release (Run Only) - macOS/Linux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "MIMode": "lldb"
         }
     ]
 }
