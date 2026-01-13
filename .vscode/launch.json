@@ -10,7 +10,7 @@
             "stopAtEntry": false
         },
         {
-            "name": "Debug (CMake Target) - macOS/Linux",
+            "name": "Debug (CMake Target) - macOS",
             "type": "cppdbg",
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
@@ -20,8 +20,25 @@
             "MIMode": "lldb",
             "setupCommands": [
                 {
-                    "description": "Set process to follow child after fork",
-                    "text": "settings set target.process.follow-fork-mode child",
+                    "description": "Enable pretty-printing for lldb",
+                    "text": "settings set target.enable-synthetic-value true",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "Debug (CMake Target) - Linux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
                     "ignoreFailures": true
                 }
             ]
@@ -36,7 +53,7 @@
             "stopAtEntry": false
         },
         {
-            "name": "Release (Run Only) - macOS/Linux",
+            "name": "Release (Run Only) - macOS",
             "type": "cppdbg",
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
@@ -44,6 +61,16 @@
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
             "MIMode": "lldb"
+        },
+        {
+            "name": "Release (Run Only) - Linux",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "MIMode": "gdb"
         }
     ]
 }
