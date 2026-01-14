@@ -9,29 +9,33 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 # Executables (build separately to avoid multiple mains)
 add_executable(Array
-    src/Array/ArrayBasics.cpp
+    src/1.EssentialConcepts/1.Array/ArrayBasics.cpp
 )
 
 add_executable(Structure
-    src/Structure/StructureBasics.cpp
+    src/1.EssentialConcepts/2.Structure/StructureBasics.cpp
 )
 
 add_executable(Pointers
-    src/Pointers/PointersBasics.cpp
-)
-
-add_executable(Reference
-   src/Reference/ReferenceBasics.cpp
+    src/1.EssentialConcepts/3.Pointers/PointersBasics.cpp
 )
 
 add_executable(PointerToStructure
-   src/PointerToStructure/PointerToStructureBasics.cpp
+    src/1.EssentialConcepts/4.PointerToStructure/PointerToStructureBasics.cpp
+)
+
+add_executable(Reference
+    src/1.EssentialConcepts/5.Reference/ReferenceBasics.cpp
 )
 
 add_executable(Function
-    src/Function/FunctionBasics.cpp
+    src/1.EssentialConcepts/6.Function/FunctionBasics.cpp
 )
 
 add_executable(ParameterPassingFunc
-    src/ParameterPassingFunc/ParameterPassingFuncBasics.cpp
+    src/1.EssentialConcepts/7.ParameterPassingFunc/ParameterPassingFuncBasics.cpp
+)
+
+add_executable(ArrayAsParameter
+    src/1.EssentialConcepts/8.ArrayAsParameter/ArrayAsParameter.cpp
 )
