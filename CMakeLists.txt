@@ -23,57 +23,62 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # These creates dll(WIN)/dylib(MAC)/so(LINUX) files for the respective executables
 # Executables (build separately to avoid multiple mains)
 add_executable(Array
-    src/1.EssentialConcepts/1.Array/ArrayBasics.cpp
+    src/2.EssentialConcepts/1.Array/ArrayBasics.cpp
 )
 
 add_executable(Structure
-    src/1.EssentialConcepts/2.Structure/StructureBasics.cpp
+    src/2.EssentialConcepts/2.Structure/StructureBasics.cpp
 )
 
 add_executable(Pointers
-    src/1.EssentialConcepts/3.Pointers/PointersBasics.cpp
+    src/2.EssentialConcepts/3.Pointers/PointersBasics.cpp
 )
 
 add_executable(PointerToStructure
-    src/1.EssentialConcepts/4.PointerToStructure/PointerToStructureBasics.cpp
+    src/2.EssentialConcepts/4.PointerToStructure/PointerToStructureBasics.cpp
 )
 
 add_executable(Reference
-    src/1.EssentialConcepts/5.Reference/ReferenceBasics.cpp
+    src/2.EssentialConcepts/5.Reference/ReferenceBasics.cpp
 )
 
 add_executable(Function
-    src/1.EssentialConcepts/6.Function/FunctionBasics.cpp
+    src/2.EssentialConcepts/6.Function/FunctionBasics.cpp
 )
 
 add_executable(ParameterPassingFunc
-    src/1.EssentialConcepts/7.ParameterPassingFunc/ParameterPassingFuncBasics.cpp
+    src/2.EssentialConcepts/7.ParameterPassingFunc/ParameterPassingFuncBasics.cpp
 )
 
 add_executable(ArrayAsParameter
-    src/1.EssentialConcepts/8.ArrayAsParameter/ArrayAsParameter.cpp
+    src/2.EssentialConcepts/8.ArrayAsParameter/ArrayAsParameter.cpp
 )
 
 add_executable(StructAsParameter
-    src/1.EssentialConcepts/9.StructAsParameter/StructAsParameter.cpp
+    src/2.EssentialConcepts/9.StructAsParameter/StructAsParameter.cpp
 )
 
 add_executable(StructureAndFunctions
-    src/1.EssentialConcepts/10.StructureAndFunctions/StructureAndFunctions.cpp
+    src/2.EssentialConcepts/10.StructureAndFunctions/StructureAndFunctions.cpp
 )
 
 add_executable(StructureAndFunctionsIntoClass
-    src/1.EssentialConcepts/11.StructureAndFunctionsIntoClass/StructureAndFunctionsIntoClass.cpp
+    src/2.EssentialConcepts/11.StructureAndFunctionsIntoClass/StructureAndFunctionsIntoClass.cpp
 )
 
 add_executable(ClassAndConstructors
-    src/1.EssentialConcepts/12.ClassAndConstructors/main.cpp
-    src/1.EssentialConcepts/12.ClassAndConstructors/ClassAndConstructors.h
-    src/1.EssentialConcepts/12.ClassAndConstructors/ClassAndConstructors.cpp
+    src/2.EssentialConcepts/12.ClassAndConstructors/main.cpp
+    src/2.EssentialConcepts/12.ClassAndConstructors/ClassAndConstructors.h
+    src/2.EssentialConcepts/12.ClassAndConstructors/ClassAndConstructors.cpp
 )
 
 add_executable(TemplateClasses
-    src/1.EssentialConcepts/13.TemplateClasses/main.cpp
-    src/1.EssentialConcepts/13.TemplateClasses/TemplateClass.h
-    # src/1.EssentialConcepts/13.TemplateClasses/TemplateClass.cpp
+    src/2.EssentialConcepts/13.TemplateClasses/main.cpp
+    src/2.EssentialConcepts/13.TemplateClasses/TemplateClass.h
+    # src/2.EssentialConcepts/13.TemplateClasses/TemplateClass.cpp
+)
+
+add_executable(Recursion
+   src/3.Recursion/BasicRecursion.cpp
+   src/3.Recursion/TypesOfRecursion.cpp
 )
