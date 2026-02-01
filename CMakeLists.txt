@@ -81,4 +81,5 @@ add_executable(TemplateClasses
 add_executable(Recursion
    src/3.Recursion/BasicRecursion.cpp
    src/3.Recursion/TypesOfRecursion.cpp
+   src/3.Recursion/Exercises.cpp
 )

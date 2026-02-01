@@ -73,8 +73,61 @@ void TreeRecursion(int N)
     }
 }
 
-int main()
+// Indirect Recursion
+// When a function calls another function and that function in turn calls the first function in an circular form, it's called INDIRECT RECURSION
+/*
+void A(int N)
 {
-    TreeRecursion(3);
-    return 0;
+    if(N>0
+    {
+        std::cout << "N: " << N << std::endl;
+        B(N - 1);
+    }
 }
+
+void B(int N)
+{
+    if(N > 1)
+    {
+        std::cout << "N: " << N << std::endl;
+        A(N / 2);
+    }
+}
+*/
+
+// Forward Declaration of A because it is used in B before its definition
+void indirectRecursionA(int N);
+
+void indirectRecursionB(int N)
+{
+    if(N>1)
+    {
+        std::cout << "N: " << N << std::endl;
+        indirectRecursionA(N / 2);
+    }
+}
+
+void indirectRecursionA(int N)
+{
+    if(N>0)
+    {
+        std::cout << "N: " << N << std::endl;
+        indirectRecursionB(N-1);
+    }
+}
+
+// Nested Recursion
+// A recursive function that passes a recursive call as an argument to itself
+int NestedRecursion(int N)
+{
+    if(N>100)
+       return N-10;
+    else
+       return NestedRecursion(NestedRecursion(N+11));   
+}
+
+// int main()
+// {
+//     NestedRecursion(96);
+//     return 0;
+// }
