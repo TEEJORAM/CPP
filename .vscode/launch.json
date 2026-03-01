@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "Debug (CMake Target) - Windows",
-            "type": "cppvsdbg",
+            "type": "cppdbg",
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
             "cwd": "${workspaceFolder}",
@@ -45,7 +45,7 @@
         },
         {
             "name": "Release (Run Only) - Windows",
-            "type": "cppvsdbg",
+            "type": "cppdbg",
             "request": "launch",
             "program": "${command:cmake.launchTargetPath}",
             "args": [],
