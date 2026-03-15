@@ -34,7 +34,7 @@ double Rectangle::CalculateArea() const
 }
 
 // Calculate Perimeter
-double Rectangle::CalculatePerimter() const
+double Rectangle::CalculatePerimeter() const
 {
     return 2 * (length + width);
 }

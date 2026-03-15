@@ -1,4 +1,4 @@
-#include "iostream"
+#include <iostream>
 
 // Tail Recursion
 // 1. In tail recursion, the recursive call is the last operation in the function
@@ -29,7 +29,7 @@ void TailRecursion(int N)
 // 2. Head recursion is not easily converted into an loop
 void HeadRecursion(int N)
 {
-    if(N > 0)
+    if (N > 0)
     {
         HeadRecursion(N - 1);
         std::cout << "N: " << N << std::endl;
@@ -65,7 +65,7 @@ fun(n)
 
 void TreeRecursion(int N)
 {
-    if(N > 0)
+    if (N > 0)
     {
         std::cout << "N: " << N << std::endl;
         TreeRecursion(N - 1);
@@ -100,7 +100,7 @@ void indirectRecursionA(int N);
 
 void indirectRecursionB(int N)
 {
-    if(N>1)
+    if (N > 1)
     {
         std::cout << "N: " << N << std::endl;
         indirectRecursionA(N / 2);
@@ -109,10 +109,10 @@ void indirectRecursionB(int N)
 
 void indirectRecursionA(int N)
 {
-    if(N>0)
+    if (N > 0)
     {
         std::cout << "N: " << N << std::endl;
-        indirectRecursionB(N-1);
+        indirectRecursionB(N - 1);
     }
 }
 
@@ -120,14 +120,27 @@ void indirectRecursionA(int N)
 // A recursive function that passes a recursive call as an argument to itself
 int NestedRecursion(int N)
 {
-    if(N>100)
-       return N-10;
+    if (N > 100)
+        return N - 10;
     else
-       return NestedRecursion(NestedRecursion(N+11));   
+        return NestedRecursion(NestedRecursion(N + 11));
 }
 
-// int main()
-// {
-//     NestedRecursion(96);
-//     return 0;
-// }
+int main()
+{
+    std::cout << "Tail Recursion:" << std::endl;
+    TailRecursion(3);
+
+    std::cout << "\nHead Recursion:" << std::endl;
+    HeadRecursion(3);
+
+    std::cout << "\nTree Recursion:" << std::endl;
+    TreeRecursion(3);
+
+    std::cout << "\nIndirect Recursion:" << std::endl;
+    indirectRecursionA(5);
+
+    std::cout << "\nNested Recursion Result: " << NestedRecursion(96) << std::endl;
+
+    return 0;
+}
