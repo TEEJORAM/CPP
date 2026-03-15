@@ -1,4 +1,4 @@
-#include "iostream"
+#include <iostream>
 
 // Head Recursion Example
 void recursiveFunction1(int N)
@@ -16,7 +16,7 @@ void recursiveFunction2(int N)
 {
     if (N > 0)
     {
-        recursiveFunction2(N-1);
+        recursiveFunction2(N - 1);
         std::cout << "N: " << N << std::endl;
     }
 }
